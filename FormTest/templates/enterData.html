@@ -1,0 +1,96 @@
+<head>
+    <style>
+        
+        body {
+            background-color: #223843;
+            color: white;
+            margin: 0;
+            font-family: Arial;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        ul {
+            background-color: #c9709f;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            list-style: none;
+        }
+        ul li {
+            font-size: 2rem;
+            padding: 1rem;
+            font-weight: 750;
+        }
+
+        ul li :hover {
+            color: rgb(84, 84, 201);
+            transition: 0.3s;
+        }
+        .form {
+            margin: 2rem;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+        }
+
+        .form h2 {
+            text-align: center;
+            margin: 0;
+        }
+        
+        .form input{
+            font-size: 1.5rem;
+            width: 20rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            border-radius: 15px;
+            padding: 0.3rem;
+        }
+
+        .form {
+            font-size: 2rem;
+        }
+
+        .active a {
+            color:rgb(84, 84, 201);
+        }
+
+    </style>
+</head>
+
+
+
+
+<body>
+    <nav>
+        <ul>
+            <li class = "active"><a href = "/FormTest/enterData">Add Cartoons</a></li>
+            <li><a href = "/FormTest/viewData">See List</a></li>
+        </ul>
+    </nav>
+    <div class="form">
+        <div class="">
+            <h2>Add New Cartoon</h2>
+            <center>
+            <form action="" method="post">
+                {% csrf_token %}
+                {{form.as_p}}
+                <!-- <br>
+                Cartoon Name: 
+                <input type="text" name="cartoonName" placeholder="Enter Cartoon Name" required><br>
+                Episode Count: 
+                <input type="number" min="1" name="episodeCount"><br>
+                Date Finished: 
+                <input type="datetime-local" value = "2000-01-01T12:00" name="dateFinished"><br>
+                Rating (out of 10): 
+                <input type="number" step=0.1 min="0" max="10" name="rating"><br> -->
+                <input type="submit" value="Add Cartoon">
+            </form>
+            </center>
+        </div>
+    </div>
+</body>
